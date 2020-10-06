@@ -96,6 +96,8 @@ class MainWindow(QtWidgets.QMainWindow):
         MainWindow.setCentralWidget(self.centralwidget)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         self.set_functions()
+        #print("Starting jobs")
+        #self.homepage.start_all_tasks()
     def set_functions(self):
         self.current_page = "home"
         self.home_tab.mousePressEvent = lambda event: self.change_page(event,"home")
@@ -138,7 +140,7 @@ class MainWindow(QtWidgets.QMainWindow):
                     self.homepage.scrollAreaWidgetContents)
                 self.homepage.verticalLayout.addWidget(tab)
                 spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-                self.homepage.verticalLayout.addItem(spacerItem) 
+                self.homepage.verticalLayout.addItem(spacerItem)
         
 #(.*)
 if __name__ == "__main__":
