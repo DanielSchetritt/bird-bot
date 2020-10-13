@@ -120,8 +120,7 @@ def start_browser(link,cookies):
     firefox_profile.accept_untrusted_certs = True
     driver = webdriver.Firefox(
         options=options,
-        firefox_profile=firefox_profile,
-        service_log_path="/dev/null",
+        firefox_profile=firefox_profile
     )
 
     driver.get(link)
